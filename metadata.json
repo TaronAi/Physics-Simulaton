@@ -1,0 +1,5 @@
+{
+  "name": "Drag Force Simulation",
+  "description": "A web-based physics simulation that demonstrates the effect of drag force on a falling object. Users can adjust parameters like mass, drag coefficient, and cross-sectional area to observe changes in velocity, acceleration, and fall time, visualized through an animation and a real-time graph.",
+  "requestFramePermissions": []
+}
