@@ -6,7 +6,7 @@ import { GRAVITY, AIR_DENSITY, OBJECT_PRESETS, INITIAL_OBJECT, INITIAL_HEIGHT } 
 // --- HELPER COMPONENTS & ICONS ---
 
 const BasketballIcon: React.FC<{className?: string}> = ({ className }) => (
-    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Basketball icon">
+    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w.org/2000/svg" aria-label="Basketball icon">
         <defs>
             <radialGradient id="basketballShine" cx="0.35" cy="0.35" r="0.65">
                 <stop offset="0%" stopColor="#FFC977" />
@@ -22,7 +22,7 @@ const BasketballIcon: React.FC<{className?: string}> = ({ className }) => (
 );
 
 const TennisBallIcon: React.FC<{className?: string}> = ({ className }) => (
-    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Tennis ball icon">
+    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w.org/2000/svg" aria-label="Tennis ball icon">
         <defs>
             <radialGradient id="tennisShine" cx="0.35" cy="0.35" r="0.65">
                 <stop offset="0%" stopColor="#E8FF5B" />
@@ -36,7 +36,7 @@ const TennisBallIcon: React.FC<{className?: string}> = ({ className }) => (
 );
 
 const BowlingBallIcon: React.FC<{className?: string}> = ({ className }) => (
-    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Bowling ball icon">
+    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w.org/2000/svg" aria-label="Bowling ball icon">
         <defs>
             <radialGradient id="bowlingShine" cx="0.35" cy="0.35" r="0.6">
                 <stop offset="0%" stopColor="#333" />
@@ -356,7 +356,7 @@ const App: React.FC = () => {
                                 <XAxis dataKey="time" type="number" domain={['auto', 'auto']} tickFormatter={(tick) => tick.toFixed(1)} tick={{ fill: '#a0aec0' }} axisLine={{ stroke: '#4A5568' }} tickLine={{ stroke: '#4A5568' }} label={{ value: 'Time (s)', position: 'insideBottom', offset: -15, fill: '#a0aec0' }} />
                                 <YAxis tickFormatter={(tick) => tick.toFixed(0)} tick={{ fill: '#a0aec0' }} axisLine={{ stroke: '#4A5568' }} tickLine={{ stroke: '#4A5568' }} label={{ value: 'Velocity (m/s)', angle: -90, position: 'insideLeft', offset: 0, fill: '#a0aec0' }} />
                                 <Tooltip contentStyle={{ backgroundColor: 'rgba(30, 41, 59, 0.9)', borderColor: 'rgba(255, 255, 255, 0.2)', color: '#cbd5e1' }} formatter={(value: number) => [`${value.toFixed(2)} m/s`, 'Velocity']} labelFormatter={(label: number) => `Time: ${label.toFixed(2)}s`} />
-                                <Line type="monotone" dataKey="velocity" stroke="#0ea5e9" strokeWidth={2.5} dot={false} isAnimationActive={false} />
+                                <Line type="natural" dataKey="velocity" stroke="#0ea5e9" strokeWidth={2.5} dot={false} isAnimationActive={true} animationDuration={250} animationEasing="linear" />
                             </LineChart>
                         </ResponsiveContainer>
                     </div>
